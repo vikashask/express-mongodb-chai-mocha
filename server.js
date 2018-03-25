@@ -53,7 +53,8 @@ app.route("/book")
     .get(book.getBooks)
     .post(book.postBook);
 app.route("/user")
-    .get(user.getUsers);
+    .get(user.getUsers)
+    .post(user.postUser);
 app.route("/book/:id")
     .get(book.getBook)
     .delete(book.deleteBook)
