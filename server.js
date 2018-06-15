@@ -59,6 +59,7 @@ app.use(bodyParser.json({
     type: 'application/json'
 }));
 
+// route
 app.get("/", (req, res) => res.json({
     message: "Welcome to our Demo"
 }));
