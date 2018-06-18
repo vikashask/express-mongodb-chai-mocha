@@ -35,7 +35,19 @@ function postUser(req, res) {
     );
 }
 
+/*
+ * POST /book to save a new book.
+ */
+function login(req, res) {
+console.log(req.body,'login data---');
+    User.find({email:req.body.email,password:req.body.password},(function(error,data){
+        res.json(data);
+    }));
+}
+
 module.exports = {
     getUsers,
+    login,
+    register,
     postUser
 };
