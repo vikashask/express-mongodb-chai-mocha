@@ -78,6 +78,8 @@ app.route("/book/:id")
 app.route("/login")
     .post(user.login);
 
+app.route("/register")
+    .post(user.register);
 
 app.listen(port);
 console.log("Listening on port " + port);
