@@ -36,7 +36,7 @@ if (config.util.getEnv('NODE_ENV') !== 'test') {
 }
 
 // adding allow access controll
-app.use(function(req,res,next){
+app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
@@ -74,6 +74,10 @@ app.route("/book/:id")
     .get(book.getBook)
     .delete(book.deleteBook)
     .put(book.updateBook);
+
+app.route("/login")
+    .post(user.login);
+
 
 app.listen(port);
 console.log("Listening on port " + port);
